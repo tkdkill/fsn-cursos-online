@@ -37,3 +37,20 @@ select{width:100px; height:25px;}
 /* Configurando tamanho de fotos */
 
 .galeria{width:200px; height:150px; margin-left:5px; display: inline-block; margin-top:5px; cursor:pointer;}
+
+.mini {display: inline-block; margin: 30px; width:200px;}
+
+.circular {border-radius: 200px; -moz-border-radius:200px; -web-kit-border-radius: 200px; width:200px;}
+
+.titulo {font-size: 20px; text-decoration:bold;}
+
+.center-align{text-align:center;}
+.left-align{text-align: left;}
+.right-align{text-align:right;}
+.justify-align{text-align:justify;}
+
+.border-bottom {border-bottom: solid 1px #ccc; padding-bottom: 20px;}
+
+.campo{width:200px;}
+
+.btn{width: 80px; height:30px; background-color:darkcyan; color:white; cursor:pointer;}

@@ -13,8 +13,8 @@
 	</header><!-- /header -->
 	<nav>
 		<?php
-			$menu = ["Home", "Restaurante", "Bares", "Buffets", "Faça a sua reserva"];
-			$links = ["index.php", "restaurante.php", "bares.php", "buffets.php", "reserva.php"];
+			$menu = ["Home", "Restaurantes", "Bares", "Buffets", "Faça a sua reserva"];
+			$links = ["index.php", "restaurantes.php", "bares.php", "buffets.php", "reserva.php"];
 
 			for($c = 0; $c <= 4; $c++ ){
 				echo "<li><a href='$links[$c]'>$menu[$c]</a></li>";

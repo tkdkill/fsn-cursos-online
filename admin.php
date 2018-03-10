@@ -18,26 +18,21 @@
 		<td class="linha l100">Telefone</td>
 		<td class="linha l100">Registar</td><tr>
 
-		<form method="post" action="" accept-charset="utf-8">
+		<form method="post" action="processa_registo.php" accept-charset="utf-8">
 			
 			<td class="linha l200"><input type="text" name="txt_nome" required autofocus class="input-text"></td>
-			<td class="linha l200"><input type="text" name="txt_cidade" required class="input-text"></td>
+			<td class="linha l200">
+				<select name="select_cidade" class="input-text">
+					<option value="Lisboa">Lisboa</option>
+					<option value="Porto">Porto</option>
+					<option value="Coimbra">Coimbra</option>
+					<option value="Beja">Beja</option>
+				</select>
+			</td>
 			<td class="linha l400"><input type="text" name="txt_endereco" required class="input-text"></td>
 			<td class="linha l100"><input type="text" name="txt_telefone" required class="input-text"></td>
 			<td class="linha l100"><button type="submit" class="btn l100">Ok</td>
 		</form>
-
-		<?php
-
-			$nome 		= isset($_POST['txt_nome'])? $_POST['txt_nome'] : "";
-			$cidade 	= isset($_POST['txt_cidade'])? $_POST['txt_cidade'] : "";
-			$endereco 	= isset($_POST['txt_endereco'])? $_POST['txt_endereco'] : "";
-			$telefone 	= isset($_POST['txt_telefone'])? $_POST['txt_telefone'] : "";
-
-
-
-			echo($nome);
-		?>
 
 	</table>
 

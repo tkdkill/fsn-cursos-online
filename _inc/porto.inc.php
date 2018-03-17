@@ -1,3 +1,23 @@
-<section>
-	<p class="titulo">Restaurantes no Porto</p>
-</section>
+
+<p class="titulo">Restaurantes no Porto</p>
+<p class="left-align">
+<?php
+	$sql = "SELECT * FROM tb_restaurantes WHERE cidade = 'Porto'";
+	$consulta = mysqli_query($conexao, $sql);
+
+	while ($restaurantes = mysqli_fetch_array($consulta)) {
+				$id 		= $restaurantes[0];
+				$nome 		= $restaurantes[1];
+				$cidade 	= $restaurantes[2];
+				$endereco 	= $restaurantes[3];
+				$telefone 	= $restaurantes[4];
+
+				echo "$nome<br>";
+				echo "$cidade<br>";
+				echo "$endereco<br>";
+				echo "$telefone<br><br>";		
+	}
+
+?>
+
+</p>

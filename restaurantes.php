@@ -1,3 +1,4 @@
+<?php $conexao = mysqli_connect("localhost", "root", "", "bd_registo"); ?>
 <DOCTYPE <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
@@ -63,7 +64,7 @@
 			<button type="submit" class="btn">ok</button>
 		</form>
 		
-	</section>
+	
 
 	<!-- incluir ficheiros php -->
 	<?php
@@ -80,7 +81,7 @@
 			include "_inc/beja.inc.php";
 		}
 	?>
-
+</section>
 	<footer id="rodape">
 		<h5>Cueso de HTML 5 com PHP e MySQL</h5>
 	</footer>

@@ -1,3 +1,7 @@
+<?php
+	$conexao = mysqli_connect("localhost", "root", "", "bd_registo");
+?>
+
 <DOCTYPE <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
@@ -31,8 +35,27 @@
 			</td>
 			<td class="linha l400"><input type="text" name="txt_endereco" required class="input-text"></td>
 			<td class="linha l100"><input type="text" name="txt_telefone" required class="input-text"></td>
-			<td class="linha l100"><button type="submit" class="btn l100">Ok</td>
+			<td class="linha l100"><button type="submit" class="btn l100">Ok</td><tr>
 		</form>
+
+		<?php 
+			$sql = "SELECT * FROM tb_restaurantes";
+			$consulta = mysqli_query($conexao, $sql);
+
+			while ($restaurantes = mysqli_fetch_array($consulta)) {
+				$id 		= $restaurantes[0];
+				$nome 		= $restaurantes[1];
+				$cidade 	= $restaurantes[2];
+				$endereco 	= $restaurantes[3];
+				$telefone 	= $restaurantes[4];
+
+				echo "<td class='linha l400'>$nome</td>";
+				echo "<td class='linha l100'>$cidade</td>";
+				echo "<td class='linha l200'>$endereco</td>";
+				echo "<td class='linha l200' colspan='2'>$telefone</td></tr>";
+				
+			}
+		?>
 
 	</table>
 
